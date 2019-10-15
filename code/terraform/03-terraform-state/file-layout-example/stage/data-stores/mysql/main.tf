@@ -8,17 +8,17 @@ terraform {
     # This backend configuration is filled in automatically at test time by Terratest. If you wish to run this example
     # manually, uncomment and fill in the config below.
 
-    # bucket         = "<YOUR S3 BUCKET>"
-    # key            = "<SOME PATH>/terraform.tfstate"
-    # region         = "us-east-2"
-    # dynamodb_table = "<YOUR DYNAMODB TABLE>"
-    # encrypt        = true
+     bucket         = "cppib-terraform-tfstate"
+     key            = "terraform.tfstate"
+     region         = "us-east-1"
+     dynamodb_table = "terraform-dynamodb"
+     encrypt        = true
 
   }
 }
 
 provider "aws" {
-  region = "us-east-2"
+  region = "us-east-1"
 
   # Allow any 2.x version of the AWS provider
   version = "~> 2.0"
